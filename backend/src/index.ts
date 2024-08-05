@@ -4,9 +4,9 @@ import 'dotenv/config.js';
 import mongoose from "mongoose";
 import path from "path";
 import {v2 as cloudinary} from "cloudinary";
-import userRouter from '../src/routes/user';
-import authRouter from '../src/routes/auth';
-import projectRouter from '../src/routes/project';
+import userRouter from './routes/user';
+import authRouter from './routes/auth';
+import projectRouter from './routes/project';
 
 
 cloudinary.config({
@@ -20,7 +20,7 @@ mongoose.connect(process.env.CONN_STR as string)
 .catch((err) => console.log(err))
 
 const app = express();
-const port = 5000
+const port = 9000
 
 app.use((req, res, next) => {
     req.setTimeout(300000);  // Set timeout to 5 minutes (300000 ms)
