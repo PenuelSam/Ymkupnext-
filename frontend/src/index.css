@@ -1,0 +1,184 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'IF Kica Light';
+    src: url('../src/ymk-fonts/IFKica-Light.woff2') format('woff2'),
+        url('../src/ymk-fonts/IFKica-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IF Kica Bold';
+    src: url('../src/ymk-fonts/IFKica-Bold.woff2') format('woff2'),
+        url('../src/ymk-fonts/IFKica-Bold.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'IF Kica Regular';
+    src: url('../src/fonts/IFKica-Regular.woff2') format('woff2'),
+        url('../src/fonts/IFKica-Regular.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+  /* For Chrome, Edge, and Safari */
+::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #000; /* Background of the track */
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333; /* Background of the thumb */
+    border-radius: 10px; /* Round the corners of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #000; /* Background of the thumb when hovered */
+}
+
+/* For Firefox */
+html {
+    scrollbar-width: thin; /* Width of the scrollbar */
+    scrollbar-color: #333 #000; /* Color of the thumb and track */
+}
+
+/* For Internet Explorer and Edge (Legacy) */
+body {
+    -ms-overflow-style: -ms-autohiding-scrollbar; /* Auto-hide the scrollbar */
+}
+
+  body{
+    overflow-x: hidden;
+    background: #000;
+  }
+
+  .banner{
+    background: url('../src/assets/project6.mp4');
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+  }
+
+  .button{
+    position: fixed;
+    right: -20px;
+    margin: 20px;
+    width: 80px;
+    height: 80px;
+    /*background-color: #222222;*/
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .burger{
+    width: 100%;
+  }
+
+  .burger::after, .burger::before{
+    content: "";
+    display: block;
+    height: 1px;
+    width: 40%;
+    margin: auto;
+    background-color: white;
+    position: relative;
+    transition: transform 0.3s;
+  }
+
+  .burger::after{
+    top: -5px;
+  }
+
+  .burger::before{
+    top: 5px;
+  }
+
+  .burgeractive.burger::after{
+    transform: rotate(45deg);
+    top: -1px;
+  }
+
+  .burgeractive.burger::before{
+    transform: rotate(-45deg);
+    top: 0px;
+  }
+
+  .menu{
+    height: 100vh;
+    background-color: rgb(41, 41, 41);
+    position: fixed;
+    right: 0;
+    top: 0;
+    color: white;
+  }
+
+  .body{
+    box-sizing: border-box;
+    height: 100%;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .nav{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
+    font-size: 56px;
+    gap: 30px;
+    margin-top: 80px;
+  }
+
+  .header{
+    color: rgb(153, 153, 153);
+    text-transform: uppercase;
+    font-size: 11px;
+    margin-bottom: 40px;
+}
+
+.footer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 12px;
+    gap: 60px;
+    color: rgb(153, 153, 153);
+}
+
+.svgCurve{
+    position: absolute;
+    top: 0;
+    left: -99px;
+    width: 100px;
+    height: 100%;
+    fill: rgb(41, 41, 41);
+    stroke: none;
+}
+
+.gallery{
+  -webkit-column-count: 3;
+  -moz-column-count: 3;
+  -webkit-column-width: 33%;
+  column-count: 3;
+  column-width: 33%;
+  -moz-column-width: 33%;
+}
